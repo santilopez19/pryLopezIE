@@ -21,5 +21,12 @@ namespace pryLopezSP1
         {
 
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InicioSesion InicioSesion = new InicioSesion();
+            InicioSesion.Show();
+        }
     }
 }

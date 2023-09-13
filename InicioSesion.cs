@@ -21,5 +21,22 @@ namespace pryLopezSP1
         {
 
         }
+
+        private void InicioSesion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SegurosFL SegurosFL = new SegurosFL();
+            SegurosFL.Show();
+        }
     }
 }

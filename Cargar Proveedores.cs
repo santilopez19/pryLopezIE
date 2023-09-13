@@ -30,10 +30,6 @@ namespace pryLopezSP1
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("Cargarproveedores.csv");
-
-            leerLinea = sr.ReadLine();
-            separardatos = leerLinea.Split(´;´);
         }
     }
 }
