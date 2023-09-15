@@ -30,6 +30,27 @@ namespace pryLopezSP1
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+            using (StreamWriter sw = new StreamWriter(txtRutaProveedor.Text, false))
+            {
+                sw.WriteLine(txtDatosProveedor);
+            }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void btnVerProveedor_Click(object sender, EventArgs e)
+        {
+            using(StreamReader sr=StreamReader(//ruta del archivo))
+            {
+                string linea;
+             while((linea = sr.ReadLine()) != null)
+                {
+                    dataGridView1.AppendText(linea+"\n");
+                }
+            }
         }
     }
 }
