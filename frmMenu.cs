@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryLopezSP1
 {
-    public partial class SegurosFL : Form
+    public partial class frmMenu : Form
     {
-        public SegurosFL()
+        public frmMenu()
         {
             InitializeComponent();
         }
@@ -49,33 +49,21 @@ namespace pryLopezSP1
         private void verClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Ver_Clientes Ver_Clientes = new Ver_Clientes();
-            Ver_Clientes.Show();
         }
 
         private void cargarClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Cargar_Clientes Cargar_Clientes = new Cargar_Clientes();
-            Cargar_Clientes.Show();
         }
 
         private void verProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Ver_Productos Ver_Productos = new Ver_Productos();
-            Ver_Productos.Show();
         }
 
         private void cargarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-            Cargar_productos Cargar_productos = new Cargar_productos();
-            Cargar_productos.Show();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)

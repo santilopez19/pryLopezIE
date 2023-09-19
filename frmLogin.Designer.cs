@@ -1,6 +1,6 @@
 ﻿namespace pryLopezSP1
 {
-    partial class InicioSesion
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.

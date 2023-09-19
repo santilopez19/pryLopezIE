@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryLopezSP1
 {
-    public partial class InicioSesion : Form
+    public partial class frmLogin : Form
     {
-        public InicioSesion()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -35,7 +35,7 @@ namespace pryLopezSP1
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SegurosFL SegurosFL = new SegurosFL();
+            frmMenu SegurosFL = new frmMenu();
             SegurosFL.Show();
         }
     }

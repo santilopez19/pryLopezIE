@@ -43,14 +43,11 @@ namespace pryLopezSP1
 
         private void btnVerProveedor_Click(object sender, EventArgs e)
         {
-            using(StreamReader sr=StreamReader(//ruta del archivo))
-            {
-                string linea;
-             while((linea = sr.ReadLine()) != null)
-                {
-                    dataGridView1.AppendText(linea+"\n");
-                }
-            }
+        }
+
+        private void Cargar_Proveedores_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
