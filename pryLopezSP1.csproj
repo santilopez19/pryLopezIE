@@ -58,12 +58,6 @@
     <Compile Include="frmIngreso.Designer.cs">
       <DependentUpon>frmIngreso.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmModificar Proveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,9 +83,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngreso.resx">
       <DependentUpon>frmIngreso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -21,14 +21,6 @@ namespace pryLopezSP1
         {
 
         }
-
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmLogin InicioSesion = new frmLogin();
-            InicioSesion.Show();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -44,9 +36,9 @@ namespace pryLopezSP1
             if(progressBarIngreso.Value==100)
             {
                 timer1.Enabled = false;
-                frmLogin frmLogin= new frmLogin();
+                frmMenu frmMenu= new frmMenu();
                 this.Hide();
-                frmLogin.Show();
+                frmMenu.Show();
             }
         }
     }
