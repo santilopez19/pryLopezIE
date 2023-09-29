@@ -30,9 +30,9 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cargarNuevoProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.listaDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,33 +47,26 @@
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(110, 554);
+            this.menuStrip1.Size = new System.Drawing.Size(155, 554);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cargarNuevoProveedorToolStripMenuItem});
+            this.listaDeProveedoresToolStripMenuItem});
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
-            // 
-            // cargarNuevoProveedorToolStripMenuItem
-            // 
-            this.cargarNuevoProveedorToolStripMenuItem.Name = "cargarNuevoProveedorToolStripMenuItem";
-            this.cargarNuevoProveedorToolStripMenuItem.Size = new System.Drawing.Size(253, 26);
-            this.cargarNuevoProveedorToolStripMenuItem.Text = "Cargar nuevo proveedor";
-            this.cargarNuevoProveedorToolStripMenuItem.Click += new System.EventHandler(this.cargarNuevoProveedorToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::pryLopezSP1.Properties.Resources.SegurosFL;
-            this.pictureBox1.Location = new System.Drawing.Point(110, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(155, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(957, 554);
+            this.pictureBox1.Size = new System.Drawing.Size(912, 554);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -82,13 +75,20 @@
             // btnCerrar
             // 
             this.btnCerrar.Location = new System.Drawing.Point(951, 511);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(100, 28);
             this.btnCerrar.TabIndex = 7;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = true;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // listaDeProveedoresToolStripMenuItem
+            // 
+            this.listaDeProveedoresToolStripMenuItem.Name = "listaDeProveedoresToolStripMenuItem";
+            this.listaDeProveedoresToolStripMenuItem.Size = new System.Drawing.Size(229, 26);
+            this.listaDeProveedoresToolStripMenuItem.Text = "Lista de Proveedores";
+            this.listaDeProveedoresToolStripMenuItem.Click += new System.EventHandler(this.listaDeProveedoresToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -101,7 +101,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMenu";
             this.Text = "SegurosFL";
             this.menuStrip1.ResumeLayout(false);
@@ -116,8 +116,8 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cargarNuevoProveedorToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.ToolStripMenuItem listaDeProveedoresToolStripMenuItem;
     }
 }

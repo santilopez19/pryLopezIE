@@ -46,23 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCargar Proveedores.cs">
+    <Compile Include="frmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCargar Proveedores.Designer.cs">
-      <DependentUpon>frmCargar Proveedores.cs</DependentUpon>
+    <Compile Include="frmProveedores.Designer.cs">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="frmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmIngreso.Designer.cs">
       <DependentUpon>frmIngreso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmModificar Proveedores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmModificar Proveedores.Designer.cs">
-      <DependentUpon>frmModificar Proveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,14 +66,14 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVer Proveedores.cs">
+    <Compile Include="frmVerProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVer Proveedores.Designer.cs">
-      <DependentUpon>frmVer Proveedores.cs</DependentUpon>
+    <Compile Include="frmVerProveedores.Designer.cs">
+      <DependentUpon>frmVerProveedores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmCargar Proveedores.resx">
-      <DependentUpon>frmCargar Proveedores.cs</DependentUpon>
+    <EmbeddedResource Include="frmProveedores.resx">
+      <DependentUpon>frmProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIngreso.resx">
       <DependentUpon>frmIngreso.cs</DependentUpon>
