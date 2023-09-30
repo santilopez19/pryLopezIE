@@ -29,33 +29,35 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.progressBarIngreso = new System.Windows.Forms.ProgressBar();
+            this.pctLogoFl = new System.Windows.Forms.PictureBox();
+            this.pbCarga = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogoFl)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pctLogoFl
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::pryLopezSP1.Properties.Resources.SegurosFL;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(660, 437);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pctLogoFl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pctLogoFl.Image = global::pryLopezSP1.Properties.Resources.SegurosFL;
+            this.pctLogoFl.Location = new System.Drawing.Point(0, 0);
+            this.pctLogoFl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pctLogoFl.Name = "pctLogoFl";
+            this.pctLogoFl.Size = new System.Drawing.Size(880, 538);
+            this.pctLogoFl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctLogoFl.TabIndex = 0;
+            this.pctLogoFl.TabStop = false;
+            this.pctLogoFl.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // progressBarIngreso
+            // pbCarga
             // 
-            this.progressBarIngreso.BackColor = System.Drawing.Color.SkyBlue;
-            this.progressBarIngreso.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.progressBarIngreso.Location = new System.Drawing.Point(203, 313);
-            this.progressBarIngreso.Name = "progressBarIngreso";
-            this.progressBarIngreso.Size = new System.Drawing.Size(240, 23);
-            this.progressBarIngreso.Step = 100;
-            this.progressBarIngreso.TabIndex = 2;
+            this.pbCarga.BackColor = System.Drawing.Color.SkyBlue;
+            this.pbCarga.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.pbCarga.Location = new System.Drawing.Point(271, 385);
+            this.pbCarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbCarga.Name = "pbCarga";
+            this.pbCarga.Size = new System.Drawing.Size(320, 28);
+            this.pbCarga.Step = 100;
+            this.pbCarga.TabIndex = 2;
             // 
             // timer1
             // 
@@ -64,26 +66,27 @@
             // 
             // frmIngreso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(660, 437);
-            this.Controls.Add(this.progressBarIngreso);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(880, 538);
+            this.Controls.Add(this.pbCarga);
+            this.Controls.Add(this.pctLogoFl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmIngreso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frminicio";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctLogoFl)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ProgressBar progressBarIngreso;
+        private System.Windows.Forms.PictureBox pctLogoFl;
+        private System.Windows.Forms.ProgressBar pbCarga;
         private System.Windows.Forms.Timer timer1;
     }
 }

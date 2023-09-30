@@ -34,7 +34,7 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.btnCargarProveedor = new System.Windows.Forms.Button();
             this.txtDatosProveedor = new System.Windows.Forms.TextBox();
-            this.txtRutaProveedor = new System.Windows.Forms.TextBox();
+            this.lblSeleccionar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,9 +42,10 @@
             // 
             this.btnCerrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnCerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCerrar.Location = new System.Drawing.Point(713, 415);
+            this.btnCerrar.Location = new System.Drawing.Point(951, 511);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btnCerrar.Size = new System.Drawing.Size(100, 28);
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
@@ -56,27 +57,30 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 257);
+            this.dataGridView1.Location = new System.Drawing.Point(33, 316);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(744, 139);
+            this.dataGridView1.Size = new System.Drawing.Size(992, 171);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(25, 21);
+            this.treeView1.Location = new System.Drawing.Point(33, 58);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(121, 196);
+            this.treeView1.Size = new System.Drawing.Size(261, 240);
             this.treeView1.TabIndex = 2;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // btnCargarProveedor
             // 
             this.btnCargarProveedor.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnCargarProveedor.Location = new System.Drawing.Point(640, 106);
+            this.btnCargarProveedor.Location = new System.Drawing.Point(885, 270);
+            this.btnCargarProveedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCargarProveedor.Name = "btnCargarProveedor";
-            this.btnCargarProveedor.Size = new System.Drawing.Size(105, 23);
+            this.btnCargarProveedor.Size = new System.Drawing.Size(140, 28);
             this.btnCargarProveedor.TabIndex = 3;
             this.btnCargarProveedor.Text = "Cargar Proveedor";
             this.btnCargarProveedor.UseVisualStyleBackColor = true;
@@ -84,28 +88,30 @@
             // 
             // txtDatosProveedor
             // 
-            this.txtDatosProveedor.Location = new System.Drawing.Point(328, 21);
-            this.txtDatosProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDatosProveedor.Location = new System.Drawing.Point(482, 58);
+            this.txtDatosProveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDatosProveedor.Multiline = true;
             this.txtDatosProveedor.Name = "txtDatosProveedor";
-            this.txtDatosProveedor.Size = new System.Drawing.Size(298, 196);
+            this.txtDatosProveedor.Size = new System.Drawing.Size(396, 240);
             this.txtDatosProveedor.TabIndex = 5;
             // 
-            // txtRutaProveedor
+            // lblSeleccionar
             // 
-            this.txtRutaProveedor.Location = new System.Drawing.Point(328, 224);
-            this.txtRutaProveedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtRutaProveedor.Name = "txtRutaProveedor";
-            this.txtRutaProveedor.Size = new System.Drawing.Size(298, 20);
-            this.txtRutaProveedor.TabIndex = 6;
+            this.lblSeleccionar.AutoSize = true;
+            this.lblSeleccionar.ForeColor = System.Drawing.Color.Black;
+            this.lblSeleccionar.Location = new System.Drawing.Point(30, 25);
+            this.lblSeleccionar.Name = "lblSeleccionar";
+            this.lblSeleccionar.Size = new System.Drawing.Size(126, 16);
+            this.lblSeleccionar.TabIndex = 6;
+            this.lblSeleccionar.Text = "Seleccionar archivo";
             // 
             // Cargar_Proveedores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.txtRutaProveedor);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.lblSeleccionar);
             this.Controls.Add(this.txtDatosProveedor);
             this.Controls.Add(this.btnCargarProveedor);
             this.Controls.Add(this.treeView1);
@@ -113,9 +119,9 @@
             this.Controls.Add(this.btnCerrar);
             this.ForeColor = System.Drawing.Color.Lavender;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Cargar_Proveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cargar_Proveedores";
             this.Load += new System.EventHandler(this.Cargar_Proveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -131,6 +137,6 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button btnCargarProveedor;
         private System.Windows.Forms.TextBox txtDatosProveedor;
-        private System.Windows.Forms.TextBox txtRutaProveedor;
+        private System.Windows.Forms.Label lblSeleccionar;
     }
 }

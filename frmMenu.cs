@@ -22,12 +22,6 @@ namespace pryLopezSP1
 
         }
 
-      
-
-
-
-
-
         private void verClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -55,9 +49,9 @@ namespace pryLopezSP1
 
         private void listaDeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProveedores frmProveedores = new frmProveedores();
+            Cargar_Proveedores frmCargar_Proveedores = new Cargar_Proveedores();
             this.Hide();
-            frmProveedores.Show();
+            frmCargar_Proveedores.Show();
         }
     }
 }

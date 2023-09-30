@@ -28,12 +28,12 @@ namespace pryLopezSP1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            progressBarIngreso.Increment(5);
-            if(progressBarIngreso.Value<100)
+            pbCarga.Increment(5);
+            if(pbCarga.Value<100)
             {
-                progressBarIngreso.Value++;
+                pbCarga.Value++;
             }
-            if(progressBarIngreso.Value==100)
+            if(pbCarga.Value==100)
             {
                 timer1.Enabled = false;
                 frmMenu frmMenu= new frmMenu();
