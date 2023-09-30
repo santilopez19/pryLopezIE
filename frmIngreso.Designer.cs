@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngreso));
             this.pctLogoFl = new System.Windows.Forms.PictureBox();
             this.pbCarga = new System.Windows.Forms.ProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -73,6 +74,7 @@
             this.Controls.Add(this.pbCarga);
             this.Controls.Add(this.pctLogoFl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmIngreso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
