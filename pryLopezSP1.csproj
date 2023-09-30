@@ -113,5 +113,15 @@
   <ItemGroup>
     <None Include="Resources\LogoSegurosFL.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Proveedores\Acuario\Lista precio Julio.txt" />
+    <Content Include="Resources\Proveedores\Acuario\Lista precio Junio.txt" />
+    <Content Include="Resources\Proveedores\Acuario\Lista precio Marzo.txt" />
+    <Content Include="Resources\Proveedores\Alfa\Lista precio Julio.txt" />
+    <Content Include="Resources\Proveedores\Alfa\Lista precio Junio.txt" />
+    <Content Include="Resources\Proveedores\Apolo\Lista precio Agosto.txt" />
+    <Content Include="Resources\Proveedores\Apolo\Lista precio Julio.txt" />
+    <Content Include="Resources\Proveedores\Apolo\Lista precio Junio.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,16 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cargar_Proveedores));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.tvwMostrarProveedores = new System.Windows.Forms.TreeView();
             this.btnCargarProveedor = new System.Windows.Forms.Button();
-            this.txtDatosProveedor = new System.Windows.Forms.TextBox();
             this.lblSeleccionar = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.imageListTreeViewProveedores = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -70,14 +75,17 @@
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // treeView1
+            // tvwMostrarProveedores
             // 
-            this.treeView1.Location = new System.Drawing.Point(33, 58);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(4);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(261, 240);
-            this.treeView1.TabIndex = 2;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.tvwMostrarProveedores.ImageIndex = 0;
+            this.tvwMostrarProveedores.ImageList = this.imageListTreeViewProveedores;
+            this.tvwMostrarProveedores.Location = new System.Drawing.Point(33, 58);
+            this.tvwMostrarProveedores.Margin = new System.Windows.Forms.Padding(4);
+            this.tvwMostrarProveedores.Name = "tvwMostrarProveedores";
+            this.tvwMostrarProveedores.SelectedImageIndex = 0;
+            this.tvwMostrarProveedores.Size = new System.Drawing.Size(261, 240);
+            this.tvwMostrarProveedores.TabIndex = 2;
+            this.tvwMostrarProveedores.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // btnCargarProveedor
             // 
@@ -90,15 +98,6 @@
             this.btnCargarProveedor.Text = "Cargar Proveedor";
             this.btnCargarProveedor.UseVisualStyleBackColor = true;
             this.btnCargarProveedor.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // txtDatosProveedor
-            // 
-            this.txtDatosProveedor.Location = new System.Drawing.Point(482, 58);
-            this.txtDatosProveedor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDatosProveedor.Multiline = true;
-            this.txtDatosProveedor.Name = "txtDatosProveedor";
-            this.txtDatosProveedor.Size = new System.Drawing.Size(396, 240);
-            this.txtDatosProveedor.TabIndex = 5;
             // 
             // lblSeleccionar
             // 
@@ -134,18 +133,55 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(312, 58);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(459, 240);
+            this.listView1.SmallImageList = this.imageListTreeViewProveedores;
+            this.listView1.TabIndex = 9;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Nombre";
+            this.columnHeader1.Width = 78;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Tipo";
+            this.columnHeader2.Width = 79;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Ult. Modificacion";
+            this.columnHeader3.Width = 118;
+            // 
+            // imageListTreeViewProveedores
+            // 
+            this.imageListTreeViewProveedores.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTreeViewProveedores.ImageStream")));
+            this.imageListTreeViewProveedores.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListTreeViewProveedores.Images.SetKeyName(0, "carpeta_pryIE1-removebg-preview.png");
+            this.imageListTreeViewProveedores.Images.SetKeyName(1, "archivo_pryIE1-removebg-preview.png");
+            // 
             // Cargar_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblSeleccionar);
-            this.Controls.Add(this.txtDatosProveedor);
             this.Controls.Add(this.btnCargarProveedor);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.tvwMostrarProveedores);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCerrar);
             this.ForeColor = System.Drawing.Color.Lavender;
@@ -167,11 +203,15 @@
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView tvwMostrarProveedores;
         private System.Windows.Forms.Button btnCargarProveedor;
-        private System.Windows.Forms.TextBox txtDatosProveedor;
         private System.Windows.Forms.Label lblSeleccionar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ImageList imageListTreeViewProveedores;
     }
 }
