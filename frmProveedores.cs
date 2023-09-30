@@ -30,10 +30,7 @@ namespace pryLopezSP1
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(txtRutaProveedor.Text, false))
-            {
-                sw.WriteLine(txtDatosProveedor);
-            }
+            
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -48,6 +45,26 @@ namespace pryLopezSP1
         private void Cargar_Proveedores_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            frmMenu frmMenu = new frmMenu();
+            this.Hide();
+            frmMenu.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            frmMenu frmMenu = new frmMenu();
+            this.Hide();
+            frmMenu.Show();
         }
     }
 }

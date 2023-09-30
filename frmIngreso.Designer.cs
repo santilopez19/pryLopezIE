@@ -40,7 +40,7 @@
             this.pctLogoFl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pctLogoFl.Image = global::pryLopezSP1.Properties.Resources.SegurosFL;
             this.pctLogoFl.Location = new System.Drawing.Point(0, 0);
-            this.pctLogoFl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pctLogoFl.Margin = new System.Windows.Forms.Padding(4);
             this.pctLogoFl.Name = "pctLogoFl";
             this.pctLogoFl.Size = new System.Drawing.Size(880, 538);
             this.pctLogoFl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -53,7 +53,7 @@
             this.pbCarga.BackColor = System.Drawing.Color.SkyBlue;
             this.pbCarga.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.pbCarga.Location = new System.Drawing.Point(271, 385);
-            this.pbCarga.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbCarga.Margin = new System.Windows.Forms.Padding(4);
             this.pbCarga.Name = "pbCarga";
             this.pbCarga.Size = new System.Drawing.Size(320, 28);
             this.pbCarga.Step = 100;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.pbCarga);
             this.Controls.Add(this.pctLogoFl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmIngreso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frminicio";
