@@ -116,9 +116,7 @@ namespace pryLopezSP1
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            TreeNode selectedNode = e.Node;
 
-            rutaProveedor = GetNodePath(selectedNode);
         }
 
         private void btnVerProveedor_Click(object sender, EventArgs e)
@@ -150,24 +148,29 @@ namespace pryLopezSP1
             this.Hide();
             frmMenu.Show();
         }
-
+        string leerLinea;
+        string[] separarDatos;
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string infoProveedor = lstProveedores.SelectedItems[0].Text.ToString();
-            string rutaProveedorParcial = Path.Combine(rutaProveedor, infoProveedor);
-            string rutaProveedorFinal = Path.Combine(@"../../Resources/Proveedores", rutaProveedorParcial);
+            StreamReader sr = new StreamReader("../../Resources/Proveedores/Acuario/Lista_precio_Julio.txt");
 
-            using (StreamReader reader = new StreamReader(rutaProveedorFinal))
+            leerLinea = sr.ReadLine();
+            separarDatos = leerLinea.Split(';');
+
+            for (int indice = 0; indice < separarDatos.Length; indice++)
             {
-                reader.ReadLine();
-
-                string linea;
-                while ((linea = reader.ReadLine()) != null)
-                {
-                    string[] parametros = linea.Split(';');
-                    dtvMostrarProveedor.Rows.Add(parametros);
-                }
+                dtvMostrarProveedor.Columns.Add(separarDatos[indice], separarDatos[indice]);
             }
+
+            while (sr.EndOfStream == false)
+            {
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+                dtvMostrarProveedor.Rows.Add(separarDatos);
+            }
+
+            sr.Close();
         }
+        
     }
 }
