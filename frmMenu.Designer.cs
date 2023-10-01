@@ -48,7 +48,7 @@
             this.msProveedores.Name = "msProveedores";
             this.msProveedores.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.msProveedores.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.msProveedores.Size = new System.Drawing.Size(110, 554);
+            this.msProveedores.Size = new System.Drawing.Size(155, 554);
             this.msProveedores.TabIndex = 0;
             this.msProveedores.Text = "menuStrip1";
             // 
@@ -57,7 +57,7 @@
             this.proveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listaDeProveedoresToolStripMenuItem});
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             // 
             // listaDeProveedoresToolStripMenuItem
@@ -71,10 +71,10 @@
             // 
             this.pctLogoFl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pctLogoFl.Image = global::pryLopezSP1.Properties.Resources.SegurosFL;
-            this.pctLogoFl.Location = new System.Drawing.Point(110, 0);
+            this.pctLogoFl.Location = new System.Drawing.Point(155, 0);
             this.pctLogoFl.Margin = new System.Windows.Forms.Padding(4);
             this.pctLogoFl.Name = "pctLogoFl";
-            this.pctLogoFl.Size = new System.Drawing.Size(957, 554);
+            this.pctLogoFl.Size = new System.Drawing.Size(912, 554);
             this.pctLogoFl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogoFl.TabIndex = 1;
             this.pctLogoFl.TabStop = false;

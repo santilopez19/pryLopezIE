@@ -32,18 +32,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cargar_Proveedores));
             this.btnCerrar = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtvMostrarProveedor = new System.Windows.Forms.DataGridView();
             this.tvwMostrarProveedores = new System.Windows.Forms.TreeView();
+            this.imageListTreeViewProveedores = new System.Windows.Forms.ImageList(this.components);
             this.btnCargarProveedor = new System.Windows.Forms.Button();
             this.lblSeleccionar = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstProveedores = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.imageListTreeViewProveedores = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarProveedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,16 +64,16 @@
             // 
             this.folderBrowserDialog1.HelpRequest += new System.EventHandler(this.folderBrowserDialog1_HelpRequest);
             // 
-            // dataGridView1
+            // dtvMostrarProveedor
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 316);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(992, 171);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtvMostrarProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtvMostrarProveedor.Location = new System.Drawing.Point(33, 316);
+            this.dtvMostrarProveedor.Margin = new System.Windows.Forms.Padding(4);
+            this.dtvMostrarProveedor.Name = "dtvMostrarProveedor";
+            this.dtvMostrarProveedor.RowHeadersWidth = 51;
+            this.dtvMostrarProveedor.Size = new System.Drawing.Size(992, 171);
+            this.dtvMostrarProveedor.TabIndex = 1;
+            this.dtvMostrarProveedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tvwMostrarProveedores
             // 
@@ -86,6 +86,13 @@
             this.tvwMostrarProveedores.Size = new System.Drawing.Size(261, 240);
             this.tvwMostrarProveedores.TabIndex = 2;
             this.tvwMostrarProveedores.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
+            // imageListTreeViewProveedores
+            // 
+            this.imageListTreeViewProveedores.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTreeViewProveedores.ImageStream")));
+            this.imageListTreeViewProveedores.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListTreeViewProveedores.Images.SetKeyName(0, "carpeta_pryIE1-removebg-preview.png");
+            this.imageListTreeViewProveedores.Images.SetKeyName(1, "archivo_pryIE1-removebg-preview.png");
             // 
             // btnCargarProveedor
             // 
@@ -133,20 +140,21 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // listView1
+            // lstProveedores
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstProveedores.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(312, 58);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(459, 240);
-            this.listView1.SmallImageList = this.imageListTreeViewProveedores;
-            this.listView1.TabIndex = 9;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.lstProveedores.HideSelection = false;
+            this.lstProveedores.Location = new System.Drawing.Point(312, 58);
+            this.lstProveedores.Name = "lstProveedores";
+            this.lstProveedores.Size = new System.Drawing.Size(459, 240);
+            this.lstProveedores.SmallImageList = this.imageListTreeViewProveedores;
+            this.lstProveedores.TabIndex = 9;
+            this.lstProveedores.UseCompatibleStateImageBehavior = false;
+            this.lstProveedores.View = System.Windows.Forms.View.Details;
+            this.lstProveedores.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -163,26 +171,19 @@
             this.columnHeader3.Text = "Ult. Modificacion";
             this.columnHeader3.Width = 118;
             // 
-            // imageListTreeViewProveedores
-            // 
-            this.imageListTreeViewProveedores.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListTreeViewProveedores.ImageStream")));
-            this.imageListTreeViewProveedores.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListTreeViewProveedores.Images.SetKeyName(0, "carpeta_pryIE1-removebg-preview.png");
-            this.imageListTreeViewProveedores.Images.SetKeyName(1, "archivo_pryIE1-removebg-preview.png");
-            // 
             // Cargar_Proveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lstProveedores);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.lblSeleccionar);
             this.Controls.Add(this.btnCargarProveedor);
             this.Controls.Add(this.tvwMostrarProveedores);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtvMostrarProveedor);
             this.Controls.Add(this.btnCerrar);
             this.ForeColor = System.Drawing.Color.Lavender;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -191,7 +192,7 @@
             this.Name = "Cargar_Proveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Cargar_Proveedores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtvMostrarProveedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,13 +203,13 @@
 
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dtvMostrarProveedor;
         private System.Windows.Forms.TreeView tvwMostrarProveedores;
         private System.Windows.Forms.Button btnCargarProveedor;
         private System.Windows.Forms.Label lblSeleccionar;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstProveedores;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;

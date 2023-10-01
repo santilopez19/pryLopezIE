@@ -32,22 +32,23 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.txtLiquidadorResponsable = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtJurisdiccion = new System.Windows.Forms.TextBox();
+            this.txtJuzgado = new System.Windows.Forms.TextBox();
+            this.txtNExpediente = new System.Windows.Forms.TextBox();
+            this.txtApertura = new System.Windows.Forms.TextBox();
+            this.txtEntidad = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.lblEntidad = new System.Windows.Forms.Label();
+            this.lblApertura = new System.Windows.Forms.Label();
+            this.lblNExpediente = new System.Windows.Forms.Label();
+            this.lblJuzgado = new System.Windows.Forms.Label();
+            this.lblJurisdiccion = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblLiquidadorResponsable = new System.Windows.Forms.Label();
+            this.btnGrabar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,149 +88,166 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // textBox1
+            // txtLiquidadorResponsable
             // 
-            this.textBox1.Location = new System.Drawing.Point(281, 331);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 22);
-            this.textBox1.TabIndex = 11;
+            this.txtLiquidadorResponsable.Location = new System.Drawing.Point(281, 331);
+            this.txtLiquidadorResponsable.Multiline = true;
+            this.txtLiquidadorResponsable.Name = "txtLiquidadorResponsable";
+            this.txtLiquidadorResponsable.Size = new System.Drawing.Size(289, 22);
+            this.txtLiquidadorResponsable.TabIndex = 11;
             // 
-            // textBox2
+            // txtDireccion
             // 
-            this.textBox2.Location = new System.Drawing.Point(281, 293);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 22);
-            this.textBox2.TabIndex = 12;
+            this.txtDireccion.Location = new System.Drawing.Point(281, 293);
+            this.txtDireccion.Multiline = true;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(289, 22);
+            this.txtDireccion.TabIndex = 12;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
-            // textBox3
+            // txtJurisdiccion
             // 
-            this.textBox3.Location = new System.Drawing.Point(281, 255);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(289, 22);
-            this.textBox3.TabIndex = 13;
+            this.txtJurisdiccion.Location = new System.Drawing.Point(281, 255);
+            this.txtJurisdiccion.Multiline = true;
+            this.txtJurisdiccion.Name = "txtJurisdiccion";
+            this.txtJurisdiccion.Size = new System.Drawing.Size(289, 22);
+            this.txtJurisdiccion.TabIndex = 13;
+            this.txtJurisdiccion.TextChanged += new System.EventHandler(this.txtJurisdiccion_TextChanged);
             // 
-            // textBox4
+            // txtJuzgado
             // 
-            this.textBox4.Location = new System.Drawing.Point(281, 217);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(289, 22);
-            this.textBox4.TabIndex = 14;
+            this.txtJuzgado.Location = new System.Drawing.Point(281, 217);
+            this.txtJuzgado.Multiline = true;
+            this.txtJuzgado.Name = "txtJuzgado";
+            this.txtJuzgado.Size = new System.Drawing.Size(289, 22);
+            this.txtJuzgado.TabIndex = 14;
+            this.txtJuzgado.TextChanged += new System.EventHandler(this.txtJuzgado_TextChanged);
             // 
-            // textBox5
+            // txtNExpediente
             // 
-            this.textBox5.Location = new System.Drawing.Point(281, 179);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(289, 22);
-            this.textBox5.TabIndex = 15;
+            this.txtNExpediente.Location = new System.Drawing.Point(281, 179);
+            this.txtNExpediente.Multiline = true;
+            this.txtNExpediente.Name = "txtNExpediente";
+            this.txtNExpediente.Size = new System.Drawing.Size(289, 22);
+            this.txtNExpediente.TabIndex = 15;
+            this.txtNExpediente.TextChanged += new System.EventHandler(this.txtNExpediente_TextChanged);
             // 
-            // textBox6
+            // txtApertura
             // 
-            this.textBox6.Location = new System.Drawing.Point(281, 141);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(289, 22);
-            this.textBox6.TabIndex = 16;
+            this.txtApertura.Location = new System.Drawing.Point(281, 141);
+            this.txtApertura.Multiline = true;
+            this.txtApertura.Name = "txtApertura";
+            this.txtApertura.Size = new System.Drawing.Size(289, 22);
+            this.txtApertura.TabIndex = 16;
+            this.txtApertura.TextChanged += new System.EventHandler(this.txtApertura_TextChanged);
             // 
-            // textBox7
+            // txtEntidad
             // 
-            this.textBox7.Location = new System.Drawing.Point(281, 103);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(289, 22);
-            this.textBox7.TabIndex = 17;
+            this.txtEntidad.Location = new System.Drawing.Point(281, 103);
+            this.txtEntidad.Multiline = true;
+            this.txtEntidad.Name = "txtEntidad";
+            this.txtEntidad.Size = new System.Drawing.Size(289, 22);
+            this.txtEntidad.TabIndex = 17;
+            this.txtEntidad.TextChanged += new System.EventHandler(this.txtEntidad_TextChanged);
             // 
-            // textBox8
+            // txtNumero
             // 
-            this.textBox8.Location = new System.Drawing.Point(281, 65);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(289, 22);
-            this.textBox8.TabIndex = 18;
+            this.txtNumero.Location = new System.Drawing.Point(281, 65);
+            this.txtNumero.Multiline = true;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(289, 22);
+            this.txtNumero.TabIndex = 18;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
-            // label1
+            // lblNumero
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(70, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 22);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "N°";
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Location = new System.Drawing.Point(70, 65);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(30, 22);
+            this.lblNumero.TabIndex = 19;
+            this.lblNumero.Text = "N°";
             // 
-            // label2
+            // lblEntidad
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 22);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Entidad";
+            this.lblEntidad.AutoSize = true;
+            this.lblEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntidad.Location = new System.Drawing.Point(70, 103);
+            this.lblEntidad.Name = "lblEntidad";
+            this.lblEntidad.Size = new System.Drawing.Size(71, 22);
+            this.lblEntidad.TabIndex = 20;
+            this.lblEntidad.Text = "Entidad";
             // 
-            // label3
+            // lblApertura
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(70, 141);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 22);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Apertura";
+            this.lblApertura.AutoSize = true;
+            this.lblApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApertura.Location = new System.Drawing.Point(70, 141);
+            this.lblApertura.Name = "lblApertura";
+            this.lblApertura.Size = new System.Drawing.Size(79, 22);
+            this.lblApertura.TabIndex = 21;
+            this.lblApertura.Text = "Apertura";
             // 
-            // label4
+            // lblNExpediente
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 179);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(125, 22);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "N° Expediente";
+            this.lblNExpediente.AutoSize = true;
+            this.lblNExpediente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNExpediente.Location = new System.Drawing.Point(70, 179);
+            this.lblNExpediente.Name = "lblNExpediente";
+            this.lblNExpediente.Size = new System.Drawing.Size(125, 22);
+            this.lblNExpediente.TabIndex = 22;
+            this.lblNExpediente.Text = "N° Expediente";
             // 
-            // label5
+            // lblJuzgado
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(70, 217);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 22);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Juzgado";
+            this.lblJuzgado.AutoSize = true;
+            this.lblJuzgado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJuzgado.Location = new System.Drawing.Point(70, 217);
+            this.lblJuzgado.Name = "lblJuzgado";
+            this.lblJuzgado.Size = new System.Drawing.Size(77, 22);
+            this.lblJuzgado.TabIndex = 23;
+            this.lblJuzgado.Text = "Juzgado";
             // 
-            // label6
+            // lblJurisdiccion
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(70, 255);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(104, 22);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "Jurisdicción";
+            this.lblJurisdiccion.AutoSize = true;
+            this.lblJurisdiccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJurisdiccion.Location = new System.Drawing.Point(70, 255);
+            this.lblJurisdiccion.Name = "lblJurisdiccion";
+            this.lblJurisdiccion.Size = new System.Drawing.Size(104, 22);
+            this.lblJurisdiccion.TabIndex = 24;
+            this.lblJurisdiccion.Text = "Jurisdicción";
             // 
-            // label7
+            // lblDireccion
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(70, 293);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 22);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Direccion";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(70, 293);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(85, 22);
+            this.lblDireccion.TabIndex = 25;
+            this.lblDireccion.Text = "Direccion";
             // 
-            // label8
+            // lblLiquidadorResponsable
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(70, 331);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(204, 22);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Liquidador Responsable";
+            this.lblLiquidadorResponsable.AutoSize = true;
+            this.lblLiquidadorResponsable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiquidadorResponsable.Location = new System.Drawing.Point(70, 331);
+            this.lblLiquidadorResponsable.Name = "lblLiquidadorResponsable";
+            this.lblLiquidadorResponsable.Size = new System.Drawing.Size(204, 22);
+            this.lblLiquidadorResponsable.TabIndex = 26;
+            this.lblLiquidadorResponsable.Text = "Liquidador Responsable";
+            // 
+            // btnGrabar
+            // 
+            this.btnGrabar.Location = new System.Drawing.Point(74, 380);
+            this.btnGrabar.Name = "btnGrabar";
+            this.btnGrabar.Size = new System.Drawing.Size(86, 33);
+            this.btnGrabar.TabIndex = 27;
+            this.btnGrabar.Text = "Grabar";
+            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // Ver_Proveedores
             // 
@@ -237,22 +255,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnGrabar);
+            this.Controls.Add(this.lblLiquidadorResponsable);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblJurisdiccion);
+            this.Controls.Add(this.lblJuzgado);
+            this.Controls.Add(this.lblNExpediente);
+            this.Controls.Add(this.lblApertura);
+            this.Controls.Add(this.lblEntidad);
+            this.Controls.Add(this.lblNumero);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.txtEntidad);
+            this.Controls.Add(this.txtApertura);
+            this.Controls.Add(this.txtNExpediente);
+            this.Controls.Add(this.txtJuzgado);
+            this.Controls.Add(this.txtJurisdiccion);
+            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtLiquidadorResponsable);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnVolver);
@@ -272,21 +291,22 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox txtLiquidadorResponsable;
+        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtJurisdiccion;
+        public System.Windows.Forms.TextBox txtJuzgado;
+        public System.Windows.Forms.TextBox txtNExpediente;
+        public System.Windows.Forms.TextBox txtApertura;
+        public System.Windows.Forms.TextBox txtEntidad;
+        public System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.Label lblEntidad;
+        private System.Windows.Forms.Label lblApertura;
+        private System.Windows.Forms.Label lblNExpediente;
+        private System.Windows.Forms.Label lblJuzgado;
+        private System.Windows.Forms.Label lblJurisdiccion;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblLiquidadorResponsable;
+        public System.Windows.Forms.Button btnGrabar;
     }
 }

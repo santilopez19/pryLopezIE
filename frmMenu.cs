@@ -45,7 +45,7 @@ namespace pryLopezSP1
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
-           
+            this.Dispose();
         }
 
         private void listaDeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
