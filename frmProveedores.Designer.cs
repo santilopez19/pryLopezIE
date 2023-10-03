@@ -154,6 +154,7 @@
             this.lstProveedores.TabIndex = 9;
             this.lstProveedores.UseCompatibleStateImageBehavior = false;
             this.lstProveedores.View = System.Windows.Forms.View.Details;
+            this.lstProveedores.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.lstProveedores_ItemCheck);
             this.lstProveedores.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1

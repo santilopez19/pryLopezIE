@@ -19,21 +19,8 @@ namespace pryLopezSP1
             PopulateTreeView();
             this.tvwMostrarProveedores.NodeMouseClick += new TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseClick);
         }
-        private string GetNodePath(TreeNode node)
-        {
-            string path = node.Text;
-            TreeNode currentNode = node.Parent;
 
-            while (currentNode != null)
-            {
-                path = currentNode.Text + "\\" + path;
-                currentNode = currentNode.Parent;
-            }
-
-            return path;
-        }
-
-        private void PopulateTreeView()
+        public void PopulateTreeView()
         {
             TreeNode rootNode;
 
@@ -47,7 +34,7 @@ namespace pryLopezSP1
             }
         }
 
-        private void GetDirectories(DirectoryInfo[] subDirs,
+        public void GetDirectories(DirectoryInfo[] subDirs,
             TreeNode nodeToAddTo)
         {
             TreeNode aNode;
@@ -65,7 +52,7 @@ namespace pryLopezSP1
                 nodeToAddTo.Nodes.Add(aNode);
             }
         }
-        void treeView1_NodeMouseClick(object sender,TreeNodeMouseClickEventArgs e)
+        public void treeView1_NodeMouseClick(object sender,TreeNodeMouseClickEventArgs e)
         {
             TreeNode newSelected = e.Node;
             lstProveedores.Items.Clear();
@@ -97,8 +84,10 @@ namespace pryLopezSP1
 
             lstProveedores.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
-
-        public string rutaProveedor = "";
+        string leerLinea;
+        string[] separarDatos;
+        private bool grillaCreada = false;
+        public static int pos = 0;
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
         {
 
@@ -106,7 +95,19 @@ namespace pryLopezSP1
 
         public void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            pos = dtvMostrarProveedor.CurrentRow.Index;
+            
+            verProveedores.txtNumero.Text = dtvMostrarProveedor[0, pos].Value.ToString();
+            verProveedores.txtEntidad.Text = dtvMostrarProveedor[1, pos].Value.ToString();
+            Ver_Proveedores.txtApertura.Text = dtvMostrarProveedor[2, pos].Value.ToString();
+            Ver_Proveedores.txtExpediente.Text = dtvMostrarProveedor[3, pos].Value.ToString();
+            Ver_Proveedores.txtJuzgado.Text = dtvMostrarProveedor[4, pos].Value.ToString();
+            Ver_Proveedores.txtJurisdiccion.Text = dtvMostrarProveedor[5, pos].Value.ToString();
+            Ver_Proveedores.txtDireccion.Text = dtvMostrarProveedor[6, pos].Value.ToString();
+            Ver_Proveedores.txtLiquidador.Text = dtvMostrarProveedor[7, pos].Value.ToString();
 
+            this.Hide();
+            Ver_Proveedores.Show();
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
@@ -148,29 +149,128 @@ namespace pryLopezSP1
             this.Hide();
             frmMenu.Show();
         }
-        string leerLinea;
-        string[] separarDatos;
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        public void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("../../Resources/Proveedores/Acuario/Lista_precio_Julio.txt");
 
-            leerLinea = sr.ReadLine();
-            separarDatos = leerLinea.Split(';');
-
-            for (int indice = 0; indice < separarDatos.Length; indice++)
+            if (!grillaCreada)
             {
-                dtvMostrarProveedor.Columns.Add(separarDatos[indice], separarDatos[indice]);
-            }
+                StreamReader sr = new StreamReader("../../Resources/Proveedores");
 
-            while (sr.EndOfStream == false)
-            {
+                string leerLinea;
+                string[] separarDatos;
+
                 leerLinea = sr.ReadLine();
                 separarDatos = leerLinea.Split(';');
-                dtvMostrarProveedor.Rows.Add(separarDatos);
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    dtvMostrarProveedor.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    dtvMostrarProveedor.Rows.Add(separarDatos);
+                }
+
+                sr.Close();
+
+                grillaCreada = true;
+            }
+            else
+            {
+                dtvMostrarProveedor.Rows.Clear();
+                dtvMostrarProveedor.Columns.Clear();
+
+                StreamReader sr = new StreamReader("../../Resources/Proveedores");
+
+                string leerLinea;
+                string[] separarDatos;
+
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    dtvMostrarProveedor.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    dtvMostrarProveedor.Rows.Add(separarDatos);
+
+                }
+
+                sr.Close();
+
+                MessageBox.Show("Grilla actualizada");
             }
 
-            sr.Close();
         }
-        
+
+        private void lstProveedores_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            if (!grillaCreada)
+            {
+                StreamReader sr = new StreamReader("../../Resources/Proveedores");
+
+                string leerLinea;
+                string[] separarDatos;
+
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    dtvMostrarProveedor.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    dtvMostrarProveedor.Rows.Add(separarDatos);
+                }
+
+                sr.Close();
+
+                grillaCreada = true;
+            }
+            else
+            {
+                // Actualizamos los datos de la grilla
+                dtvMostrarProveedor.Rows.Clear();
+                dtvMostrarProveedor.Columns.Clear();
+
+                StreamReader sr = new StreamReader("../../Resources/Proveedores");
+
+                string leerLinea;
+                string[] separarDatos;
+
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    dtvMostrarProveedor.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    dtvMostrarProveedor.Rows.Add(separarDatos);
+
+                }
+
+                sr.Close();
+
+                MessageBox.Show("Grilla actualizada");
+            }
+
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace pryLopezSP1
             InitializeComponent();
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+        public void btnVolver_Click(object sender, EventArgs e)
         {
             Cargar_Proveedores frmCargar_Proveedores = new Cargar_Proveedores();
             this.Hide();
@@ -38,7 +38,7 @@ namespace pryLopezSP1
 
         }
 
-        private void txtNumero_TextChanged(object sender, EventArgs e)
+        public void txtNumero_TextChanged(object sender, EventArgs e)
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumero.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
@@ -50,7 +50,7 @@ namespace pryLopezSP1
             }
         }
 
-        private void txtDireccion_TextChanged(object sender, EventArgs e)
+        public void txtDireccion_TextChanged(object sender, EventArgs e)
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumero.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
@@ -62,7 +62,7 @@ namespace pryLopezSP1
             }
         }
 
-        private void txtJurisdiccion_TextChanged(object sender, EventArgs e)
+        public void txtJurisdiccion_TextChanged(object sender, EventArgs e)
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumero.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
@@ -74,7 +74,7 @@ namespace pryLopezSP1
             }
         }
 
-        private void txtJuzgado_TextChanged(object sender, EventArgs e)
+        public void txtJuzgado_TextChanged(object sender, EventArgs e)
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumero.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
@@ -86,7 +86,7 @@ namespace pryLopezSP1
             }
         }
 
-        private void txtNExpediente_TextChanged(object sender, EventArgs e)
+        public void txtNExpediente_TextChanged(object sender, EventArgs e)
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumero.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
@@ -98,7 +98,7 @@ namespace pryLopezSP1
             }
         }
 
-        private void txtApertura_TextChanged(object sender, EventArgs e)
+        public void txtApertura_TextChanged(object sender, EventArgs e)
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumero.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
@@ -110,7 +110,7 @@ namespace pryLopezSP1
             }
         }
 
-        private void txtEntidad_TextChanged(object sender, EventArgs e)
+        public void txtEntidad_TextChanged(object sender, EventArgs e)
         {
             if (txtNumero.Text != "" & txtEntidad.Text != "" & txtApertura.Text != "" & txtNumero.Text != "" & txtJuzgado.Text != "" & txtJurisdiccion.Text != "" & txtDireccion.Text != "" & txtLiquidadorResponsable.Text != "")
             {
@@ -122,11 +122,50 @@ namespace pryLopezSP1
             }
 
         }
-        private void btnGrabar_Click(object sender, EventArgs e)
+
+        public static string rutaArchivo = "../../Resources";
+        public void btnGrabar_Click(object sender, EventArgs e)
         {
-            Cargar_Proveedores frmCargar_Proveedores = new Cargar_Proveedores();
+            string posicion = Cargar_Proveedores.pos.ToString();
+            List<string> lista = new List<string>();
+            using (StreamReader leer = new StreamReader(rutaArchivo))
+            {
+                string linea;
+                while ((linea = leer.ReadLine()) != null)
+                {
+                    string[] parametros = linea.Split(';');
+
+                    if (parametros[0] != posicion)
+                    {
+                        lista.Add(linea);
+                    }
+                    else
+                    {
+                        string lineaDos = txtNumero.Text + ";" + txtEntidad.Text + ";" + txtApertura.Text + ";" + txtNExpediente.Text + ";" + txtJuzgado.Text + ";" + txtJurisdiccion.Text + ";" + txtDireccion.Text + ";" + txtLiquidadorResponsable.Text + ";";
+                        lista.Add(lineaDos);
+                    }
+                }
+            }
+
+            using (StreamWriter escribir = new StreamWriter(rutaArchivo))
+            {
+                foreach (string linea in lista)
+                {
+                    escribir.WriteLine(linea);
+                }
+            }
+
+            MessageBox.Show("Proveedor Modificado");
             this.Hide();
-            frmCargar_Proveedores.Show();
+
+            txtNumero.Clear();
+            txtEntidad.Clear();
+            txtApertura.Clear();
+            txtNExpediente.Clear();
+            txtJuzgado.Clear();
+            txtJurisdiccion.Clear();
+            txtDireccion.Clear();
+            txtLiquidadorResponsable.Clear();
         }
 
     }

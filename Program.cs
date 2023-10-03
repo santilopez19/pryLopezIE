@@ -16,7 +16,7 @@ namespace pryLopezSP1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmIngreso());
+            Application.Run(new Cargar_Proveedores());
         }
     }
 }
